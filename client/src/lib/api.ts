@@ -27,8 +27,13 @@ export const TOKEN_KEY = 'retentio_token';
 
 // ── Axios instance ────────────────────────────────────────────────────────────
 
+const API_BASE_URL = (
+  import.meta.env.VITE_API_URL ||
+  'https://retentio-backend.onrender.com'
+).replace(/\/+$/, '');
+
 const client = axios.create({
-  baseURL: '/api/v1',
+  baseURL: `${API_BASE_URL}/api/v1`,
   headers: { 'Content-Type': 'application/json' },
   withCredentials: false,
 });
