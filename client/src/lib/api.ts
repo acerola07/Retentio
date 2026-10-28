@@ -91,10 +91,10 @@ export const predictApi = {
   },
 
   /**
-   * Returns a URL string; the browser navigates there directly to
-   * trigger the CSV download (no auth needed for the template).
+   * Returns a URL string; the browser navigates there directly to trigger the
+   * PDF download from the static public folder (no auth or backend needed).
    */
-  templateUrl: () => '/api/v1/predict/template',
+  templateUrl: () => '/downloads/Customer-CSV-Template-Guide.pdf',
 };
 
 // ── Customers API ─────────────────────────────────────────────────────────────
